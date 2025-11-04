@@ -15,7 +15,7 @@
 
     header {
       background: #111;
-      padding: 20px;
+      padding: 25px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
@@ -25,8 +25,20 @@
       color: #00ffb0;
     }
 
+    .profile {
+      margin-top: 40px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #00ffb0;
+      box-shadow: 0 0 20px rgba(0,255,176,0.4);
+    }
+
     section {
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     .about {
@@ -38,7 +50,7 @@
 
     .button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px;
       padding: 12px 25px;
       background: #00ffb0;
       color: #000;
@@ -51,6 +63,18 @@
     .button:hover {
       background: #fff;
       color: #111;
+    }
+
+    .social-links a {
+      color: #00ffb0;
+      margin: 0 10px;
+      font-size: 1.3em;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
     }
 
     footer {
@@ -66,13 +90,31 @@
     <h1>👋 Hi, I'm Usman Ahmad</h1>
   </header>
 
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Usman Ahmad">
+  </div>
+
   <section>
     <h2>About Me</h2>
     <p class="about">
-      I'm a beginner web developer who loves building simple and creative websites using HTML and CSS. 
-      This is my first portfolio website hosted on GitHub Pages. Stay tuned for my future projects!
+      I'm a web developer who loves building modern and creative websites using HTML, CSS, and JavaScript. 
+      This portfolio shows my journey in learning and creating real web projects.
     </p>
-    <a href="#" class="button">View My Work</a>
+    <div>
+      <a href="mailto:manii739922@gmail.com" class="button">📧 Contact Me</a>
+      <a href="https://github.com/maanii99022-commits" class="button">💻 GitHub</a>
+      <!-- 👇 WhatsApp Button -->
+      <a href="https://wa.me/923087399022" class="button" target="_blank">💬 Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Connect With Me</h2>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
   </section>
 
   <footer>
