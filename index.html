@@ -1,239 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PixelSyntax — Usman Ahmad</title>
-  <meta name="description" content="PixelSyntax — Usman Ahmad. Frontend developer creating clean, responsive websites. Contact via WhatsApp." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelSyntax | Portfolio</title>
   <style>
-    /* ===== Reset / base ===== */
-    :root{
-      --bg-1:#071022;
-      --bg-2:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent-blue:#0ea5e9;
-      --accent-cyan:#06b6d4;
-      --accent-cta: linear-gradient(90deg,#06b6d4,#7c3aed);
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      --maxw:1100px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:28px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      line-height:1.45;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #0a0f24, #1b2a4a);
+      color: #fff;
+      text-align: center;
     }
 
-    /* ===== Layout wrapper ===== */
-    .wrap{
-      width:100%;
-      max-width:var(--maxw);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:18px;
-      padding:26px;
-      box-shadow: 0 18px 50px rgba(2,6,23,0.6);
-      border: 1px solid rgba(255,255,255,0.03);
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* ===== Top header ===== */
-    .top {
-      display:flex;
-      gap:18px;
-      align-items:center;
-    }
-    .logo-wrap{
-      width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03);
-    }
-    .brand{
-      display:flex;flex-direction:column;
-    }
-    h1{margin:0;font-size:20px;letter-spacing:0.2px}
-    .tag{color:var(--muted);font-size:13px;margin-top:6px}
-
-    /* ===== Two-column layout ===== */
-    .layout{
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:20px;
-      margin-top:18px;
+    header img {
+      width: 120px;
+      border-radius: 50%;
     }
 
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);
+    header h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      color: #00d4ff;
+      letter-spacing: 2px;
     }
 
-    /* About area */
-    .about-top{display:flex;gap:16px;align-items:center}
-    .profile-img{
-      width:120px;height:120px;border-radius:12px;object-fit:cover;border:3px solid rgba(255,255,255,0.04);
-      box-shadow: 0 10px 30px rgba(2,6,23,0.7);
-      background: linear-gradient(180deg,#0b1220,#161b27);
-      display:block;
+    header p {
+      color: #ccc;
+      font-size: 1rem;
     }
-    .about-title{font-size:16px;margin:0}
-    .about-desc{color:var(--muted);margin-top:10px;font-size:14px}
 
-    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .skill{background:var(--glass);padding:7px 10px;border-radius:10px;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
-
-    /* CTA buttons */
-    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:var(--accent-cta);color:#042027;text-decoration:none;font-weight:700;border:none;cursor:pointer;
-      box-shadow: 0 10px 28px rgba(3,7,18,0.6);
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
-    .btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);box-shadow:none}
 
-    /* Projects column */
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:10px}
-    .project{
-      padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02);
+    .about {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
-    .project h3{margin:0;color:var(--accent-blue);font-size:16px}
-    .project p{margin:8px 0 0 0;color:var(--muted);font-size:13px}
 
-    /* Quick add area */
-    .quick-add{margin-top:12px;background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;color:var(--muted);font-size:13px}
-    .quick-add code{background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;display:block;color:var(--muted);overflow:auto}
+    .projects {
+      margin-top: 60px;
+    }
 
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    .project {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
 
-    /* Small devices */
-    @media (max-width:900px){
-      .layout{grid-template-columns:1fr}
-      .logo-wrap{width:80px;height:80px;border-radius:12px}
-      .brand h1{font-size:18px}
+    .project h3 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #ddd;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      color: #00d4ff;
+      border: 2px solid #00d4ff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00d4ff;
+      color: #000;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00d4ff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <div class="top">
-      <div class="logo-wrap" aria-hidden="true">
-        <!-- SVG: stylized PS + swoosh (original recreation) -->
-        <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PixelSyntax logo">
-          <defs>
-            <linearGradient id="lg1" x1="0" x2="1">
-              <stop offset="0" stop-color="#e6eef6" stop-opacity="0.18"/>
-              <stop offset="1" stop-color="#94a3b8" stop-opacity="0.03"/>
-            </linearGradient>
-            <linearGradient id="lg2" x1="0" x2="1">
-              <stop offset="0" stop-color="#60a5fa"/>
-              <stop offset="1" stop-color="#06b6d4"/>
-            </linearGradient>
-            <filter id="ds" x="-50%" y="-50%" width="200%" height="200%">
-              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
-            </filter>
-          </defs>
 
-          <rect rx="14" width="72" height="72" fill="url(#lg1)"></rect>
+  <header>
+    <img src="https://share.google/images/VimpyrR11JRuHrhel" alt="PixelSyntax Logo">
+    <h1>PixelSyntax</h1>
+    <p>Building Creative Web Experiences</p>
+  </header>
 
-          <g transform="translate(8,8)">
-            <text x="6" y="36" font-family="Verdana, Arial, sans-serif" font-size="28" fill="#e6eef6" font-weight="800">P</text>
-            <text x="28" y="36" font-family="Verdana, Arial, sans-serif" font-size="28" fill="#94a3b8" font-weight="700">S</text>
-          </g>
-
-          <path d="M12 44 C26 36, 46 34, 60 28" stroke="url(#lg2)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#ds)"></path>
-        </svg>
-      </div>
-
-      <div class="brand">
-        <h1>PixelSyntax — Usman Ahmad</h1>
-        <div class="tag">Frontend Developer • Clean & Responsive Websites</div>
-      </div>
+  <section>
+    <div class="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m a passionate web designer and developer focused on creating beautiful and functional digital experiences. 
+      I love to experiment with new designs, build tools, and make ideas come alive on the web.</p>
+      <a class="btn" href="https://wa.me/923087399022" target="_blank">Contact on WhatsApp</a>
     </div>
 
-    <div class="layout" role="region" aria-label="Main content">
-      <!-- left: about & services -->
-      <section class="card" aria-label="About and services">
-        <div class="about-top">
-          <!-- Profile image: upload 'usman.jpg' in repo root or replace the src with your public image URL -->
-          <img class="profile-img" src="https://raw.githubusercontent.com/maanii99022-commits/maanii99022-commits.github.io/main/usman.jpg" alt="Usman Ahmad — profile photo" onerror="this.style.display='none'">
-          <div>
-            <div class="about-title">About Me</div>
-            <p class="about-desc">
-              Hello — I’m <strong>Usman Ahmad</strong>, a frontend developer building clean, accessible, and mobile-first websites. I focus on fast-loading pages and clear user experiences that help small businesses and freelancers look professional online.
-            </p>
-
-            <div class="skills" aria-hidden="true">
-              <div class="skill">HTML5</div>
-              <div class="skill">Responsive Design</div>
-              <div class="skill">Accessibility</div>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn" href="mailto:manii739922@gmail.com">📧 Email</a>
-              <a class="btn ghost" href="https://github.com/maanii99022-commits" target="_blank">💻 GitHub</a>
-              <a class="btn" href="https://wa.me/923087399022" style="background:linear-gradient(90deg,#25D366,#06b6d4);color:#042027;">💬 WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <hr style="margin:18px 0;border-color:rgba(255,255,255,0.03)">
-
-        <h3 style="margin:0 0 10px 0">Services</h3>
-        <div class="about-desc">
-          • Single-page landing pages • Multi-page business websites • Convert Figma/PSD to HTML • Small UI components & fixes
-        </div>
-      </section>
-
-      <!-- right: projects -->
-      <aside class="card" aria-label="Projects and quick add">
-        <h2 style="margin:0 0 8px 0">Projects</h2>
-
-        <div class="projects" id="projectsList">
-          <!-- Example project cards (replace links with your demos) -->
-          <article class="project">
-            <h3>Simple Landing Page</h3>
-            <p>One-page responsive landing page with contact CTA.</p>
-            <div style="margin-top:10px"><a class="btn ghost" href="https://maanii99022-commits.github.io/demo1.html" target="_blank">View Demo</a></div>
-          </article>
-
-          <article class="project">
-            <h3>Portfolio Template</h3>
-            <p>Reusable portfolio layout for showcasing work and contact details.</p>
-            <div style="margin-top:10px"><a class="btn ghost" href="https://maanii99022-commits.github.io/demo2.html" target="_blank">View Demo</a></div>
-          </article>
-
-          <article class="project">
-            <h3>Utility / Tool (placeholder)</h3>
-            <p>Small web tool (calculator/utility) — ideal for niche traffic.</p>
-            <div style="margin-top:10px"><a class="btn ghost" href="#" onclick="alert('Replace with demo link')">View Demo</a></div>
-          </article>
-        </div>
-
-        <div class="quick-add" aria-hidden="true">
-          <div style="font-weight:700;margin-bottom:6px">Quick add a project</div>
-          <div style="font-size:13px;color:var(--muted)">Open <code>index.html</code> and add this inside the &lt;div id="projectsList"&gt;:</div>
-          <code>&lt;article class="project"&gt;
-  &lt;h3&gt;Project Name&lt;/h3&gt;
-  &lt;p&gt;Short description…&lt;/p&gt;
-  &lt;div style="margin-top:10px"&gt;&lt;a class="btn ghost" href="https://your-demo-link" target="_blank"&gt;View Demo&lt;/a&gt;&lt;/div&gt;
-&lt;/article&gt;</code>
-        </div>
-      </aside>
+    <div class="projects">
+      <h2>Projects</h2>
+      <div id="projectsList">
+        <article class="project">
+          <h3>Modern Portfolio Template</h3>
+          <p>A clean and responsive portfolio design built with HTML, CSS, and GitHub Pages — perfect for showcasing your work.</p>
+          <a class="btn" href="https://github.com/" target="_blank">View Demo</a>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <footer>
-      © <span id="year"></span> PixelSyntax — Usman Ahmad • Built with HTML & CSS • Hosted on GitHub Pages
-    </footer>
-  </div>
+  <footer>
+    © 2025 <b>PixelSyntax</b> • Built with 💻 HTML & CSS • Hosted on <a href="https://github.com/">GitHub Pages</a>
+  </footer>
 
-  <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
