@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "App",
-  "start_url": "/",
+  "name": "USMAN INTRODUCTION",
+  "short_name": "Usman web",
+  "start_url": "urlusman.com",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
